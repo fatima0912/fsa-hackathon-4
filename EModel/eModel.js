@@ -3,7 +3,8 @@ const eModel= mongoose.model('products',{
 
     id:{
         type: Number,
-        unique: true
+        unique: true,
+        required:true
     },
     brand: {
         type: String,
@@ -11,7 +12,7 @@ const eModel= mongoose.model('products',{
     },
     price:{
         type: Number,
-        required: true,
+        required:  [true,'price is required']
     },
     inStock:{
         type: Boolean,
@@ -20,7 +21,6 @@ const eModel= mongoose.model('products',{
     },
     createdAt: Date,
     updatedAt: { type: Date, default: Date.now() }
-}
-);
+});
 
 module.exports=eModel;
