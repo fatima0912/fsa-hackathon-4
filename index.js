@@ -1,9 +1,9 @@
-const express=require('express');
-const mongoose= require('mongoose');
-const bodyParser= require('body-parser');
-const config=require('./config/index');
-const eDefaultRouter= require('./eRoutes/eDefaultRouter');
-const eProductsRouter=require('./eRoutes/eProductsRouter');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const config = require('./config/index');
+const eDefaultRouter = require('./eRoutes/eDefaultRouter');
+const eProductsRouter = require('./eRoutes/eProductsRouter');
 
 const app= express();
 const port=3000;

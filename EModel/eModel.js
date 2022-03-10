@@ -1,26 +1,25 @@
-const mongoose= require('mongoose');
-const eModel= mongoose.model('products',{
+const mongoose = require('mongoose');
 
-    id:{
-        type: Number,
-        unique: true,
-        required:true
+const EModel = mongoose.model('products', {
+    model: {
+        type: String,
+        required: [true, 'Model Number needed']
     },
     brand: {
         type: String,
-        required: true,
+        required:[true, 'required']
     },
     price:{
-        type: Number,
-        required:  [true,'price is required']
+        type: Number
     },
+    
     inStock:{
-        type: Boolean,
-        active: true,
-        required: true
+        type: Boolean
+        
     },
+    
     createdAt: Date,
     updatedAt: { type: Date, default: Date.now() }
 });
 
-module.exports=eModel;
+module.exports = EModel;
