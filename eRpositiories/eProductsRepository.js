@@ -15,7 +15,7 @@ const deleteProducts = (model) =>{
 
  try{
      //console.log
-    return EModel.deleteOne(model   );
+    return EModel.deleteOne(model);
  }catch(e){
      console.log("cannot delete",e);
  }   

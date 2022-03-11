@@ -41,7 +41,7 @@ const getProducts = async (req, res)=>{
 }
 };
 const deleteProducts = async(req, res)=>{
-    const model = req.params.model;
+    const model = +req.params.model;
     // const products= await eProductsRepository.getProducts();
     // for (let i = 0; i < products.length; i++) 
     // {
