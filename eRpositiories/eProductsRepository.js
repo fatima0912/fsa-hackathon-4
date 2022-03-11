@@ -11,11 +11,11 @@ const getProducts = () => {
       return EModel.find(filter, projection);
 }
 
-const deleteProducts = (id) =>{
+const deleteProducts = (model) =>{
 
  try{
      //console.log
-    return EModel.deleteOne({id : id});
+    return EModel.deleteOne(model   );
  }catch(e){
      console.log("cannot delete",e);
  }   
@@ -26,7 +26,7 @@ const updateProduct= (model, data) =>{
     const { brand, 
             price, 
             inStock} = data;
-    return eModel.updateOne({model}, {
+    return EModel.updateOne({model}, {
         $set: {
             brand,
             price,

@@ -41,7 +41,7 @@ const getProducts = async (req, res)=>{
 }
 };
 const deleteProducts = async(req, res)=>{
-    const model = +req.params.model;
+    const model = req.params.model;
     // const products= await eProductsRepository.getProducts();
     // for (let i = 0; i < products.length; i++) 
     // {
@@ -53,15 +53,15 @@ const deleteProducts = async(req, res)=>{
         await eProductsRepository.deleteProducts(model);
         res.status(204).send("cannot delete");
     };
- /* const updateProduct = async (req, res)=>{
+ const updateProduct = async (req, res)=>{
     try{
         const model = req.params.model;
     await eProductsRepository.updateProduct(model, req.body);
-    res. status(204).send();
+    res.status(204).send();
     } catch(e){
         res.status(500).send("Internal Server Error");
     }
 
- }; */
+ }; 
 
-module.exports = {addList, handleErrors, getProducts, deleteProducts};
+module.exports = {addList, handleErrors, getProducts, deleteProducts, updateProduct};

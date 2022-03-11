@@ -6,5 +6,5 @@ const router = express.Router();
 router.post('/products',eProductsCtrl.addList);
 router.get('/productlist',eProductsCtrl.getProducts);
 router.delete('/:model',eProductsCtrl.deleteProducts);
-//router.put('/:model', eProductsCtrl.updateProduct);
+router.put('/:model', eProductsCtrl.updateProduct);
 module.exports = router;
