@@ -11,15 +11,16 @@ const getProducts = () => {
       return EModel.find(filter, projection);
 }
 
+/*const getSellerByEmail = (email) => {
+    const filter = { email };
+    const projection = { __v: 0, _id: 0, password: 0 };
+    return EModel.findOne(filter, projection);
+} */
+
 const deleteProducts = (model) =>{
 
- try{
-     //console.log
     return EModel.deleteOne(model);
- }catch(e){
-     console.log("cannot delete",e);
- }   
-    
+    //return products.save();   
 }
 
 const updateProduct= (model, data) =>{
@@ -35,8 +36,8 @@ const updateProduct= (model, data) =>{
         }
     });
 };   
-module.exports = { add, 
-                   getProducts,
-                   deleteProducts, 
-                   updateProduct
+module.exports = {add, 
+                  getProducts,
+                  deleteProducts, 
+                  updateProduct
                 };
