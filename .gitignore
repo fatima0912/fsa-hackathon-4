@@ -1,5 +1,5 @@
 .vscode
-node_modules
+node_modules/
 slrCtrl.js
 seller.js
 
